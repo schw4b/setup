@@ -53,12 +53,8 @@ Install dropbox from repository and subscribe to folder '.env'
     cp ~/env/private/.smbcredentials.* ~/
     chmod 600 ~/.smbcredentials.*
 
-## Basic packages
-
-    get sylpheed
-
 ## Sudoer
-******
+
     sudo visudo
 
     %simon ALL=NOPASSWD: /sbin/reboot
@@ -71,7 +67,29 @@ Install dropbox from repository and subscribe to folder '.env'
     %simon ALL=NOPASSWD: /bin/mount
     %simon ALL=NOPASSWD: /bin/umount
 
-## NVIDIA
+## Packages
+Basic packages:
+
+    get sylpheed xterm r-base-core cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag gnome-specimen cifs-utils abcde id3v2 gnome-screenshot screen iotop flip geany geany-plugin-spellcheck chromium-codecs-ffmpeg-extra gksu mricron mriconvert xfce4-power-manager lxrandr
+    
+## Rstudio
+
+    get libgstreamer0.10-0 libgstreamer-plugins-base0.10-0 libjpeg62
+    sudo dpkg -i rstudio-0.99.903-amd64.deb
+
+## Libre Office
+
+    get myspell-en-us myspell-de-ch hyphen-en-us hyphen-de
+
+## Latex
+
+    get texlive-latex-base texlive-latex-extra texlive-bibtex-extra texlive-publishers texlive-fonts-extra texlive-math-extra texlive-humanities texlive-lang-german texinfo
+
+## Games
+
+    get freeciv-client-gtk micropolis
+    
+    ## NVIDIA
 
     sudo add-apt-repository ppa:xorg-edgers/ppa -y
     sudo apt-get update
@@ -102,23 +120,6 @@ Fix splash after nvidia driver was installed
     sudo cryptsetup status cryptswap1
     sudo vim /etc/crypttab
     sudo vim /etc/fstab # uncomment cryptswap1
-
-## Packages
-Basic packages:
-
-    get xterm r-base-core cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag gnome-specimen cifs-utils abcde id3v2 gnome-screenshot screen iotop flip geany geany-plugin-spellcheck chromium-codecs-ffmpeg-extra gksu mricron mriconvert xfce4-power-manager lxrandr
-
-## Libre Office
-
-    get myspell-en-us myspell-de-ch hyphen-en-us hyphen-de
-
-## Latex
-
-    get texlive-latex-base texlive-latex-extra texlive-bibtex-extra texlive-publishers texlive-fonts-extra texlive-math-extra texlive-humanities texlive-lang-german texinfo
-
-## Games
-
-    get freeciv-client-gtk micropolis
 
 ## Change kernel boot options
 For echobase:
