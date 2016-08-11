@@ -104,8 +104,9 @@ Fix splash after nvidia driver was installed
     sudo vim /etc/fstab # uncomment cryptswap1
 
 ## Packages
+Basic packages:
 
-    get xterm r-base-core cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient php5-cli vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag gnome-specimen cifs-utils abcde id3v2 gnome-screenshot screen iotop flip geany geany-plugin-spellcheck chromium-codecs-ffmpeg-extra gksu mricron mriconvert xfce4-power-manager lxrandr
+    get xterm r-base-core cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag gnome-specimen cifs-utils abcde id3v2 gnome-screenshot screen iotop flip geany geany-plugin-spellcheck chromium-codecs-ffmpeg-extra gksu mricron mriconvert xfce4-power-manager lxrandr
 
 ## Libre Office
 
