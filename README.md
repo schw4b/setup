@@ -33,130 +33,102 @@ Install dropbox from repository and subscribe to folder '.env'
     sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
     sudo apt-get update
     sudo apt-get install google-chrome-stable
+    
+## Look and Feel
 
-AUTOMATIC SECURITY UPDATES
-**************************
-sudo dpkg-reconfigure -plow unattended-upgrades
+    gsettings set com.canonical.desktop.interface scrollbar-mode normal # disable overlay scroll
+    gsettings reset com.canonical.desktop.interface scrollbar-mode # enable again
+    get lxappearance gnome-themes-standard faenza-icon-theme
 
-SSD Tuning
-**********
-sudo hdparm -I /dev/sdb | grep TRIM
-sudo vi /etc/cron.weekly/fstrim # for non-samsung drives
-exec fstrim-all --no-model-check
-cat /proc/mounts | grep noatime
-sudo vi /etc/fstab noatime
+## SSD Tuning
 
+    sudo hdparm -I /dev/sdb | grep TRIM
+    sudo vi /etc/cron.weekly/fstrim # for non-samsung drives
+    exec fstrim-all --no-model-check
+    cat /proc/mounts | grep noatime
+    sudo vi /etc/fstab # add noatime
 
+## SMB Credentials
 
-PRIVACY
-*******
-~/env/conf/fixubuntu.sh
+    cp ~/env/private/.smbcredentials.* ~/
+    chmod 600 ~/.smbcredentials.*
 
-ENVIRONMENT
-***********
-~/env/conf/install
+## Basic packages
 
-SMB Credentials
-***************
-cp ~/env/private/.smbcredentials.* ~/
-chmod 600 ~/.smbcredentials.*
+    get sylpheed
 
-BASIC PACKAGES
-**************
-sylpheed hardinfo rdesktop
-
-SUDOER
+## Sudoer
 ******
-sudo visudo
+    sudo visudo
 
-%simon ALL=NOPASSWD: /sbin/reboot
-%simon ALL=NOPASSWD: /sbin/shutdown
-%simon ALL=NOPASSWD: /usr/sbin/pm-suspend
-%simon ALL=NOPASSWD: /usr/sbin/vpnc-connect
-%simon ALL=NOPASSWD: /usr/sbin/vpnc-disconnect
-%simon ALL=NOPASSWD: /usr/bin/unattended-upgrade
-%simon ALL=NOPASSWD: /usr/bin/apt-get
-%simon ALL=NOPASSWD: /bin/mount
-%simon ALL=NOPASSWD: /bin/umount
+    %simon ALL=NOPASSWD: /sbin/reboot
+    %simon ALL=NOPASSWD: /sbin/shutdown
+    %simon ALL=NOPASSWD: /usr/sbin/pm-suspend
+    %simon ALL=NOPASSWD: /usr/sbin/vpnc-connect
+    %simon ALL=NOPASSWD: /usr/sbin/vpnc-disconnect
+    %simon ALL=NOPASSWD: /usr/bin/unattended-upgrade
+    %simon ALL=NOPASSWD: /usr/bin/apt-get
+    %simon ALL=NOPASSWD: /bin/mount
+    %simon ALL=NOPASSWD: /bin/umount
 
+## NVIDIA
 
- AND FEEL
-*************
-# disable overlay scroll
-gsettings set com.canonical.desktop.interface scrollbar-mode normal
-# gsettings reset com.canonical.desktop.interface scrollbar-mode # enable again
-get lxappearance gnome-themes-standard
+    sudo add-apt-repository ppa:xorg-edgers/ppa -y
+    sudo apt-get update
 
-sudo add-apt-repository ppa:noobslab/icons
-get faenza-icon-theme
-
-NVIDIA
-******
-sudo add-apt-repository ppa:xorg-edgers/ppa -y
-sudo apt-get update
 Search nvidia weebsite for newest driver for card
-sudo apt-get install nvidia-XXX
 
-# fix splash after nvidia driver was installed
-sudo apt-get install v86d
-sudo vim /etc/default/grub
-GRUB_GFXMODE=1280x1024x24
-GRUB_GFXPAYLOAD_LINUX=keep
-echo FRAMEBUFFER=y | sudo tee /etc/initramfs-tools/conf.d/splash
-sudo update-initramfs -u
-sudo update-grub2
+    sudo apt-get install nvidia-XXX
 
-Speed up GRUB Menu
-******************
-sudo vim /etc/default/grub
-set timeout to 2 sec
-comment hidden timeout
-sudo update-grub2
+Fix splash after nvidia driver was installed
 
-ENABLE ENCRYPTED SWAP
-*********************
-sudo cryptsetup status cryptswap1
-sudo vim /etc/crypttab
-sudo vim /etc/fstab # uncomment cryptswap1
+    sudo apt-get install v86d
+    sudo vim /etc/default/grub
+    GRUB_GFXMODE=1280x1024x24
+    GRUB_GFXPAYLOAD_LINUX=keep
+    echo FRAMEBUFFER=y | sudo tee /etc/initramfs-tools/conf.d/splash
+    sudo update-initramfs -u
+    sudo update-grub2
 
-PACKAGES
-********
-get xterm r-base-core cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient php5-cli vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag xournal gnome-specimen cifs-utils abcde id3v2 gnome-screenshot screen iotop flip geany geany-plugin-spellcheck chromium-codecs-ffmpeg-extra gksu mricron mriconvert xfce4-power-manager lxrandr
+## Speed up GRUB Menu
 
-# libreoffice:
-get myspell-en-us myspell-de-ch hyphen-en-us hyphen-de
+    sudo vim /etc/default/grub
+    set timeout to 2 sec
+    comment hidden timeout
+    sudo update-grub2
 
-# latex:
-get texlive-latex-base texlive-latex-extra texlive-bibtex-extra texlive-publishers texlive-fonts-extra texlive-math-extra texlive-humanities texlive-lang-german texinfo
+## Enable encrypted swap
 
-ADDITIONAL PACKAGES
-*******************
-aeskulap
-dosbox
-figlet
-freeciv-client-gtk
-graphviz
-icedax
-lmodern
-micropolis
-mp3gain
-recode
-scummvm
-cowsay
-rsnapshot
-brother-lpr-drivers-laser
-ttf-mscorefonts-installer
+    sudo cryptsetup status cryptswap1
+    sudo vim /etc/crypttab
+    sudo vim /etc/fstab # uncomment cryptswap1
 
-CHANGE KERNEL BOOT OPTIONS
-**************************
-for echobase:
-sudo vim /etc/default/grub
-GRUB_CMDLINE_LINUX_DEFAULT="nomodeset"
-sudo update-grub
+## Packages
 
-Printers
-********
+    get xterm r-base-core cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient php5-cli vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag gnome-specimen cifs-utils abcde id3v2 gnome-screenshot screen iotop flip geany geany-plugin-spellcheck chromium-codecs-ffmpeg-extra gksu mricron mriconvert xfce4-power-manager lxrandr
+
+## Libre Office
+
+    get myspell-en-us myspell-de-ch hyphen-en-us hyphen-de
+
+## Latex
+
+    get texlive-latex-base texlive-latex-extra texlive-bibtex-extra texlive-publishers texlive-fonts-extra texlive-math-extra texlive-humanities texlive-lang-german texinfo
+
+## Games
+
+    get freeciv-client-gtk micropolis
+
+## Change kernel boot options
+For echobase:
+
+    sudo vim /etc/default/grub
+    GRUB_CMDLINE_LINUX_DEFAULT="nomodeset"
+    sudo update-grub
+
+## Printers
 HP Officejet Pro 6830 e-All-in-One
-sudo apt-add-repository ppa:otto-kesselgulasch/misc
-sudo apt-get update
-get hplip
+
+    sudo apt-add-repository ppa:otto-kesselgulasch/misc
+    sudo apt-get update
+    get hplip
