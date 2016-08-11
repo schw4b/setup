@@ -134,3 +134,4 @@ HP Officejet Pro 6830 e-All-in-One
     sudo apt-add-repository ppa:otto-kesselgulasch/misc
     sudo apt-get update
     get hplip
+    hp-doctor # for HP-1020
