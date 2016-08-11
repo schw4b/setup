@@ -1,15 +1,38 @@
-# setup
-Setup of my linux boxes
-SETUP FILE PROCEDURE FOR MY MACHINES
-************************************
-by Simon Schwab
+# Setup of my linux boxes
 
-CHECK SATA PORTS
-****************
+##Check SATA ports
 Your should attach your disk at the fastest sata links
-dmesg | grep -i ahci # is ahci enabled in BIOS? See also hardinfo
-dmesg | grep SATA | grep up
-sudo smartctl -a /dev/sda | grep "^SATA"
+
+    dmesg | grep -i ahci # is ahci enabled in BIOS? See also hardinfo
+    dmesg | grep SATA | grep up
+    sudo smartctl -a /dev/sda | grep "^SATA"
+
+##Dropbox
+
+    sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+    sudo add-apt-repository "deb http://linux.dropbox.com/ubuntu $(lsb_release -sc) main"
+    sudo apt-get update
+    sudo apt-get install dropbox
+    dropbox start -i
+
+Install dropbox from repository and subscribe to folder '.env'
+
+##Fluxbox window manager
+
+    sudo apt-get install encfs git
+    mkdir ~/env
+    vi .pw # enter pw
+    chmod 600 .pw
+    encfs ~/Dropbox/.env ~/env
+    ~/env/conf/install
+    get vim fluxbox lxterminal pcmanfm
+
+##Install Google Chrome
+
+    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+    sudo apt-get update
+    sudo apt-get install google-chrome-stable
 
 AUTOMATIC SECURITY UPDATES
 **************************
@@ -23,19 +46,7 @@ exec fstrim-all --no-model-check
 cat /proc/mounts | grep noatime
 sudo vi /etc/fstab noatime
 
-DROPBOX
-*******
-Install dropbox from repository and subscribe to folder '.env'
 
-sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
-sudo add-apt-repository "deb http://linux.dropbox.com/ubuntu $(lsb_release -sc) main"
-
-sudo apt-get install encfs
-ln -s Dropbox\ \(PUK-TRC\)/ Dropbox
-mkdir ~/env; encfs ~/Dropbox/.env ~/env
-mkdir ~/bin; cp ~/env/bin/mount.encfs ~/bin/
-vi .pw
-chmod 600 .pw
 
 PRIVACY
 *******
@@ -52,7 +63,7 @@ chmod 600 ~/.smbcredentials.*
 
 BASIC PACKAGES
 **************
-get vim fluxbox lxterminal rdesktop pcmanfm sylpheed hardinfo
+sylpheed hardinfo rdesktop
 
 SUDOER
 ******
