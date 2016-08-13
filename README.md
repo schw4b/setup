@@ -89,14 +89,13 @@ Basic packages:
 
     get freeciv-client-gtk micropolis
     
-    ## NVIDIA
-
-    sudo add-apt-repository ppa:xorg-edgers/ppa -y
-    sudo apt-get update
-
+## NVIDIA
 Search nvidia weebsite for newest driver for card
-
-    sudo apt-get install nvidia-XXX
+    
+    lspci | grep VGA
+    
+    search nvidia-36
+    get nvidia-361
 
 Fix splash after nvidia driver was installed
 
