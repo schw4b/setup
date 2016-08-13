@@ -38,7 +38,11 @@ Install dropbox from repository and subscribe to folder '.env'
 
     gsettings set com.canonical.desktop.interface scrollbar-mode normal # disable overlay scroll
     gsettings reset com.canonical.desktop.interface scrollbar-mode # enable again
-    get lxappearance gnome-themes-standard faenza-icon-theme
+    get lxappearance gnome-themes-standard
+    
+    sudo add-apt-repository ppa:moka/daily
+    sudo apt-get update
+    sudo apt-get install moka-icon-theme
 
 ## SSD Tuning
 
