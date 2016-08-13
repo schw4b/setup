@@ -93,8 +93,14 @@ Basic packages:
 
     get freeciv-client-gtk micropolis
     
+    Flightgear:
+    
+    sudo add-apt-repository ppa:saiarcot895/flightgear
+    sudo apt-get update
+    get flightgear
+    
 ## NVIDIA
-Search nvidia weebsite for newest driver for card
+Search nvidia website for newest driver for card
     
     lspci | grep VGA
     
