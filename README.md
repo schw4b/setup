@@ -46,12 +46,6 @@ Install dropbox from repository and subscribe to folder '.env'
 
 ## SSD Tuning
 
-    sudo hdparm -I /dev/sdb | grep TRIM
-    sudo vi /etc/cron.weekly/fstrim # for non-samsung drives
-    exec fstrim-all --no-model-check
-    cat /proc/mounts | grep noatime
-    sudo vi /etc/fstab # add noatime
-
 ## SMB Credentials
 
     cp ~/env/private/.smbcredentials.* ~/
