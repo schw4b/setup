@@ -25,7 +25,7 @@ Install dropbox from repository and subscribe to folder '.env'
     chmod 600 .pw
     encfs ~/Dropbox/.env ~/env
     ~/env/conf/install
-    get vim fluxbox lxterminal pcmanfm
+    sudo apt-get install vim fluxbox lxterminal pcmanfm
 
 ##Install Google Chrome
 
