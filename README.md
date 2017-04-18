@@ -70,10 +70,10 @@ Basic packages:
 ## Multimedia
     get ubuntu-restricted-extras
     
-## Rstudio
-
-    get libgstreamer0.10-0 libgstreamer-plugins-base0.10-0 libjpeg62
-    sudo dpkg -i rstudio-0.99.903-amd64.deb
+## R and Rstudio
+    sudo echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" | sudo tee -a /etc/apt/sources.list
+    gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+    gpg -a --export E084DAB9 | sudo apt-key add -
 
 ## Libre Office
 
