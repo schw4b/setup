@@ -1,14 +1,12 @@
 # Setup of my linux boxes
 
-##Check SATA ports
+## Check SATA ports
 Your should attach your disk at the fastest sata links
-
     dmesg | grep -i ahci # is ahci enabled in BIOS? See also hardinfo
     dmesg | grep SATA | grep up
     sudo smartctl -a /dev/sda | grep "^SATA"
 
-##Dropbox
-
+## Dropbox
     sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
     sudo add-apt-repository "deb http://linux.dropbox.com/ubuntu $(lsb_release -sc) main"
     sudo apt-get update
@@ -17,8 +15,7 @@ Your should attach your disk at the fastest sata links
 
 Install dropbox from repository and subscribe to folder '.env'
 
-##Fluxbox window manager
-
+## Fluxbox window manager
     sudo apt-get install encfs git
     mkdir ~/env
     vi .pw # enter pw
