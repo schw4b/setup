@@ -2,6 +2,7 @@
 
 ## Check SATA ports
 Your should attach your disk at the fastest sata links
+
     dmesg | grep -i ahci # is ahci enabled in BIOS? See also hardinfo
     dmesg | grep SATA | grep up
     sudo smartctl -a /dev/sda | grep "^SATA"
