@@ -20,6 +20,7 @@ Install dropbox from repository and subscribe to folder '.env'
     mkdir ~/env
     vi .pw # enter pw
     chmod 600 .pw
+    cat .pw
     encfs ~/Dropbox/.env ~/env
     ~/env/conf/install
     sudo apt-get install vim fluxbox lxterminal pcmanfm
@@ -40,8 +41,6 @@ Install dropbox from repository and subscribe to folder '.env'
     sudo add-apt-repository ppa:moka/daily
     sudo apt-get update
     sudo apt-get install moka-icon-theme
-
-## SSD Tuning
 
 ## SMB Credentials
 
