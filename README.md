@@ -97,6 +97,7 @@ Basic packages:
     
 ## NVIDIA
 Search nvidia website for suitable driver version for card
+
     sudo add-apt-repository ppa:graphics-drivers
     sudo apt-get update
     search ^nvidia-xxx | grep binary
