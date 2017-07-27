@@ -75,7 +75,8 @@ Basic packages:
     gpg -a --export E084DAB9 | sudo apt-key add -
     sudo apt-get update
     sudo apt-get install r-base
-    # get RStudio deb package from website and install it.
+    
+Get RStudio deb package from website and install it.
 
 ## Libre Office
 
