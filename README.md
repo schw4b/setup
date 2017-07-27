@@ -74,7 +74,8 @@ Basic packages:
     gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
     gpg -a --export E084DAB9 | sudo apt-key add -
     sudo apt-get update
-    # get RStudio deb package from website and install it.
+    sudo apt-get install r-base
+    # get RStudio deb package from website and install it.
 
 ## Libre Office
 
@@ -95,12 +96,11 @@ Basic packages:
     get flightgear
     
 ## NVIDIA
-Search nvidia website for newest driver for card
-    
-    lspci | grep VGA
-    
-    search nvidia-36
-    get nvidia-361
+Search nvidia website for suitable driver version for card
+    sudo add-apt-repository ppa:graphics-drivers
+    sudo apt-get update
+    search ^nvidia-xxx | grep binary
+    get nvidia-xxx
 
 Fix splash after nvidia driver was installed
 
