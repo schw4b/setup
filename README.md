@@ -74,7 +74,7 @@ Basic packages:
     gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
     gpg -a --export E084DAB9 | sudo apt-key add -
     sudo apt-get update
-    sudo apt-get install r-base
+    sudo apt-get install r-base
     
 Get RStudio deb package from website and install it.
 
