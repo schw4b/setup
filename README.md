@@ -64,7 +64,7 @@ Install dropbox from repository and subscribe to folder '.env'
 ## Packages
 Basic packages:
 
-    get xterm cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag gnome-specimen cifs-utils abcde id3v2 gnome-screenshot screen iotop flip geany geany-plugin-spellcheck gksu mricron mriconvert xfce4-power-manager lxrandr colordiff
+    sudo apt-get install xterm cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag gnome-specimen cifs-utils abcde id3v2 gnome-screenshot screen iotop flip geany geany-plugin-spellcheck gksu mricron mriconvert xfce4-power-manager lxrandr colordiff
     
 ## Multimedia
     get ubuntu-restricted-extras
@@ -74,9 +74,15 @@ Basic packages:
     gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
     gpg -a --export E084DAB9 | sudo apt-key add -
     sudo apt-get update
-    sudo apt-get install r-base
+    sudo apt-get install r-base   
     
 Get RStudio deb package from website and install it.
+    
+    sudo dpkg -i rstudio-xenial-1.0.153-amd64.deb
+
+Install prerequisite packages for `devtools`
+    
+    sudo apt-get install libcurl3 libssl-dev
 
 ## Libre Office
 
