@@ -5,6 +5,10 @@ Your should attach your disk at the fastest sata links
 
     dmesg | grep SATA | grep up
     dmesg | grep ata?
+    
+## Automatic Security Updates
+    sudo apt-get install unattended-upgrades
+    sudo dpkg-reconfigure unattended-upgrades
 
 ## Dropbox
     sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
