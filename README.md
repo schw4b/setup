@@ -163,7 +163,7 @@ This may be required with office printers
     client min protocol = SMB2
     client max protocol = SMB3
     
-Check access to a bloddy windows domain printer
+Check access to a bloody windows domain printer
 
     smbclient -L host -U DOMAIN/simons%password
     
