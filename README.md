@@ -154,3 +154,13 @@ HP Officejet Pro 6830 e-All-in-One
     sudo apt-get update
     get hplip
     hp-doctor # for HP-1020
+    
+This may be required with office printers
+    
+    sudo vim /etc/samba/smb.conf
+    
+    [global]
+    client min protocol = SMB2
+    client max protocol = SMB3
+
+
