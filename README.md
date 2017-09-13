@@ -109,6 +109,11 @@ Install prerequisite packages for `devtools`
     sudo apt-get update
     get flightgear
     
+## VirtualBox
+
+    sudo apt-get libqt5x11extras5
+    dpkg -i virtualbox-5.1_5.1.26-117224-Ubuntu-xenial_amd64.deb
+    
 ## NVIDIA
 Search nvidia website for suitable driver version for card
 
