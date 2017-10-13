@@ -71,7 +71,11 @@ Install dropbox from repository and subscribe to folder '.env'
 ## Packages
 Basic packages:
 
-    sudo apt-get install xterm cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag gnome-specimen cifs-utils abcde id3v2 gnome-screenshot screen iotop flip geany geany-plugin-spellcheck gksu mricron mriconvert xfce4-power-manager lxrandr colordiff
+    sudo apt-get install xterm cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag gnome-specimen cifs-utils abcde id3v2 gnome-screenshot screen iotop flip geany geany-plugin-spellcheck gksu xfce4-power-manager lxrandr colordiff
+    
+MRI/neuroscience:
+
+    sudo apt-get install mricron dcm2niix
     
 ## Multimedia
     get ubuntu-restricted-extras
