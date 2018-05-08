@@ -12,8 +12,8 @@ Your should attach your disk at the fastest sata links
     
 ## Update system
     sudo apt-get update
-    rmdir Documents/ Music/ Pictures/ Templates/ Videos/ Public/
-    rm examples.desktop
+    rmdir ~/Documents/ ~/Music/ ~/Pictures/ ~/Templates/ ~/Videos/ ~/Public/
+    rm ~/examples.desktop
 
 ## Dropbox
 Download Dropbox package from official website.
@@ -91,15 +91,15 @@ Install prerequisite packages for `devtools`
     
     sudo apt-get install libcurl3 libssl-dev
 
-## Libre Office
+### Libre Office
 
     get myspell-en-us myspell-de-ch hyphen-en-us hyphen-de
 
-## Latex
+### Latex
 
     get texlive-latex-base texlive-latex-extra texlive-bibtex-extra texlive-publishers texlive-fonts-extra texlive-math-extra texlive-humanities texlive-lang-german texinfo
 
-## Games
+### Games
 
     get freeciv-client-gtk micropolis
     
@@ -138,12 +138,6 @@ Fix splash after nvidia driver was installed
     set timeout to 2 sec
     comment hidden timeout
     sudo update-grub2
-
-## Enable encrypted swap
-
-    sudo cryptsetup status cryptswap1
-    sudo vim /etc/crypttab
-    sudo vim /etc/fstab # uncomment cryptswap1
 
 ## Change kernel boot options
 For echobase:
