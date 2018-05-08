@@ -59,7 +59,7 @@ Reboot into Fluxbox now.
     sudo visudo
 
     %simon ALL=NOPASSWD: /sbin/reboot
-    %simon ALL=NOPASSWD: /sbin/shutdown
+    %simon ALL=NOPASSWD: /sbin/halt
     %simon ALL=NOPASSWD: /usr/sbin/pm-suspend
     %simon ALL=NOPASSWD: /usr/sbin/vpnc-connect
     %simon ALL=NOPASSWD: /usr/sbin/vpnc-disconnect
@@ -71,7 +71,7 @@ Reboot into Fluxbox now.
 ## Packages
 Basic packages:
 
-    sudo apt-get install xterm cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag cifs-utils abcde id3v2 gnome-screenshot screen iotop flip geany geany-plugin-spellcheck xfce4-power-manager lxrandr colordiff
+    sudo apt-get install xterm cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag cifs-utils abcde id3v2 gnome-screenshot screen iotop flip geany geany-plugin-spellcheck xfce4-power-manager lxrandr colordiff pm-utils
     
 ### MRI/neuroscience:
 
@@ -108,6 +108,12 @@ Install prerequisite packages for `devtools`
     sudo add-apt-repository ppa:saiarcot895/flightgear
     sudo apt-get update
     get flightgear
+
+### Skype
+Download Skype from official website.
+
+    get gconf-service libgconf-2-4
+    sudo dpkg -i ~/Downloads/skypeforlinux-64.deb
     
 ## VirtualBox
 
