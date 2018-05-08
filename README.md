@@ -9,12 +9,17 @@ Your should attach your disk at the fastest sata links
 ## Automatic Security Updates
     sudo apt-get install unattended-upgrades
     sudo dpkg-reconfigure unattended-upgrades
+    
+## Update system
+    sudo apt-get update
+    rmdir Documents/ Music/ Pictures/ Templates/ Videos/ Public/
+    rm examples.desktop
 
 ## Dropbox
-    sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
-    sudo add-apt-repository "deb http://linux.dropbox.com/ubuntu $(lsb_release -sc) main"
+Download Dropbox package from official website.
+
     sudo apt-get update
-    sudo apt-get install dropbox
+    sudo dpkg -i dropbox_2015.10.28_amd64.deb
     dropbox start -i
 
 Install dropbox from repository and subscribe to folder '.env'
@@ -22,12 +27,17 @@ Install dropbox from repository and subscribe to folder '.env'
 ## Fluxbox window manager
     sudo apt-get install encfs git
     mkdir ~/env
-    vi .pw # enter pw
-    chmod 600 .pw
-    cat .pw
+    vi .encfs # enter pw
+    chmod 600 .encfs
+    cat .encfs
     encfs ~/Dropbox/.env ~/env
     ~/env/conf/install
     sudo apt-get install vim fluxbox lxterminal pcmanfm
+
+Reboot into Fluxbox now.
+
+## Look and Feel
+    sudo apt-get install moka-icon-theme
     
 ## Install SSH keys
     tar xvf ~/env/private/ssh.tar.gz -C $HOME
@@ -38,16 +48,6 @@ Install dropbox from repository and subscribe to folder '.env'
     sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
     sudo apt-get update
     sudo apt-get install google-chrome-stable
-    
-## Look and Feel
-
-    gsettings set com.canonical.desktop.interface scrollbar-mode normal # disable overlay scroll
-    gsettings reset com.canonical.desktop.interface scrollbar-mode # enable again
-    get lxappearance gnome-themes-standard
-    
-    sudo add-apt-repository ppa:moka/daily
-    sudo apt-get update
-    sudo apt-get install moka-icon-theme
 
 ## SMB Credentials
 
