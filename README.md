@@ -38,6 +38,10 @@ Reboot into Fluxbox now.
 
 ## Look and Feel
     sudo apt-get install moka-icon-theme
+
+## Improve memory and disable Wayland
+    sudo vim  /etc/gdm3/custom.conf
+    WaylandEnable=false
     
 ## Install SSH keys
     tar xvf ~/env/private/ssh.tar.gz -C $HOME
@@ -71,7 +75,7 @@ Reboot into Fluxbox now.
 ## Packages
 Basic packages:
 
-    sudo apt-get install xterm cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag cifs-utils abcde id3v2 gnome-screenshot screen iotop flip geany geany-plugin-spellcheck xfce4-power-manager lxrandr colordiff pm-utils
+    sudo apt-get install xterm cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag cifs-utils abcde id3v2 screen iotop flip geany geany-plugin-spellcheck xfce4-power-manager lxrandr colordiff pm-utils vinagre
     
 ### MRI/neuroscience:
 
@@ -97,7 +101,7 @@ Install prerequisite packages for `devtools`
 
 ### Latex
 
-    get texlive-latex-base texlive-latex-extra texlive-bibtex-extra texlive-publishers texlive-fonts-extra texlive-math-extra texlive-humanities texlive-lang-german texinfo
+    get texlive-latex-base texlive-latex-extra texlive-bibtex-extra texlive-publishers texlive-fonts-extra texlive-humanities texlive-lang-german texinfo
 
 ### Games
 
