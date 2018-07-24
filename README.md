@@ -31,7 +31,7 @@ Download Dropbox from official website.
     gpg ~/keys.tar.gz.gpg
     tar xvzf ~/keys.tar.gz
 
-    sudo apt-get install encfs
+    sudo apt-get install encfs cryfs
     mkdir ~/env; cat ~/.encfs
     encfs ~/Dropbox/.env/ ~/env/
     ~/env/conf/install
@@ -158,7 +158,7 @@ This may be required with office printers
     
 Check access to a windows domain printer
 
-    smbclient -L host -U DOMAIN/simons%password    
+    smbclient -L host -U DOMAIN/simons%password
 
 ## SMB Credentials
 
