@@ -68,6 +68,11 @@ Download Skype from official website.
 
     sudo apt-get install gconf-service libgconf-2-4
     sudo dpkg -i ~/Downloads/skypeforlinux-64.deb
+
+### Git
+    sudo apt-get install git
+    git config --global user.email "schw4b@gmail.com"
+    git config --global user.name "Simon Schwab"
     
 ### MRI/neuroscience:
 
@@ -151,10 +156,9 @@ This may be required with office printers
     client min protocol = SMB2
     client max protocol = SMB3
     
-Check access to a bloody windows domain printer
+Check access to a windows domain printer
 
-    smbclient -L host -U DOMAIN/simons%password
-    
+    smbclient -L host -U DOMAIN/simons%password    
 
 ## SMB Credentials
 
