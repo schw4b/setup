@@ -5,46 +5,6 @@ Your should attach your disk at the fastest sata links
 
     dmesg | grep SATA | grep up
     dmesg | grep ata?
-    
-## Automatic Security Updates
-    sudo apt-get install unattended-upgrades
-    sudo dpkg-reconfigure unattended-upgrades
-    
-## Update system
-    sudo apt-get update
-    rmdir ~/Documents/ ~/Music/ ~/Pictures/ ~/Templates/ ~/Videos/ ~/Public/
-    rm ~/examples.desktop
-
-## Dropbox
-Download Dropbox package from official website.
-
-    sudo apt-get update
-    sudo dpkg -i dropbox_2015.10.28_amd64.deb
-    dropbox start -i
-
-Install dropbox from repository and subscribe to folder '.env'
-
-## Fluxbox window manager
-    sudo apt-get install encfs git
-    mkdir ~/env
-    vi .encfs # enter pw
-    chmod 600 .encfs
-    cat .encfs
-    encfs ~/Dropbox/.env ~/env
-    ~/env/conf/install
-    sudo apt-get install vim fluxbox lxterminal pcmanfm
-
-Reboot into Fluxbox now.
-
-## Look and Feel
-    sudo apt-get install moka-icon-theme
-
-## Improve memory and disable Wayland
-    sudo vim  /etc/gdm3/custom.conf
-    WaylandEnable=false
-    
-## Install SSH keys
-    tar xvf ~/env/private/ssh.tar.gz -C $HOME
 
 ## Install Google Chrome
 
@@ -52,11 +12,36 @@ Reboot into Fluxbox now.
     sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
     sudo apt-get update
     sudo apt-get install google-chrome-stable
+      
+## Look & Feel
 
-## SMB Credentials
+    rm -rf ~/Templates ~/Public ~/examples.desktop
+    sudo apt install gnome-tweak-tool
+    sudo apt-get install moka-icon-theme
 
-    cp ~/env/private/.smbcredentials.* ~/
-    chmod 600 ~/.smbcredentials.*
+## Dropbox
+Download Dropbox from official website.
+
+    sudo apt-get install python-gtk2
+    sudo dpkg -i dropbox_2015.10.28_amd64.deb
+
+## Setup enctypted filesystems
+
+    # copy keys from phone
+    gpg ~/keys.tar.gz.gpg
+    tar xvzf ~/keys.tar.gz
+
+    sudo apt-get install encfs
+    mkdir ~/env; cat ~/.encfs
+    encfs ~/Dropbox/.env/ ~/env/
+    ~/env/conf/install
+
+## Improve memory and disable Wayland
+    sudo vim  /etc/gdm3/custom.conf
+    WaylandEnable=false
+    
+## Install SSH keys
+    tar xvzf ~/env/private/ssh.tar.gz -C $HOME
 
 ## Sudoer
 
@@ -73,19 +58,27 @@ Reboot into Fluxbox now.
     %simon ALL=NOPASSWD: /bin/umount
 
 ## Packages
-Basic packages:
 
-    sudo apt-get install xterm cmus sox scribus gimp unrar lame libsox-fmt-mp3 filezilla hplip nmap imagemagick smbclient vpnc screenruler pwgen mesa-utils aspell-de a2ps easytag cifs-utils abcde id3v2 screen iotop flip geany geany-plugin-spellcheck xfce4-power-manager lxrandr colordiff pm-utils vinagre
+### Basic packages
+
+    sudo apt-get install scribus gimp unrar filezilla hplip nmap imagemagick smbclient cifs-utils vpnc screenruler pwgen mesa-utils flip colordiff vinagre
+
+### Skype
+Download Skype from official website.
+
+    sudo apt-get install gconf-service libgconf-2-4
+    sudo dpkg -i ~/Downloads/skypeforlinux-64.deb
     
 ### MRI/neuroscience:
 
     sudo apt-get install mricron dcm2niix
     
 ### Multimedia
+
     sudo apt-get install ubuntu-restricted-extras
     
 ### R and Rstudio
-    sudo apt-get install r-base   
+    sudo apt-get install r-base
     
 Get RStudio deb package from website and install it.
     sudo apt-get install libjpeg62 
@@ -94,14 +87,6 @@ Get RStudio deb package from website and install it.
 Install prerequisite packages for `devtools`
     
     sudo apt-get install libcurl3 libssl-dev
-
-### Libre Office
-
-    get myspell-en-us myspell-de-ch hyphen-en-us hyphen-de
-
-### Latex
-
-    get texlive-latex-base texlive-latex-extra texlive-bibtex-extra texlive-publishers texlive-fonts-extra texlive-humanities texlive-lang-german texinfo
 
 ### Games
 
@@ -112,12 +97,6 @@ Install prerequisite packages for `devtools`
     sudo add-apt-repository ppa:saiarcot895/flightgear
     sudo apt-get update
     get flightgear
-
-### Skype
-Download Skype from official website.
-
-    get gconf-service libgconf-2-4
-    sudo dpkg -i ~/Downloads/skypeforlinux-64.deb
     
 ## VirtualBox
 
@@ -177,4 +156,7 @@ Check access to a bloody windows domain printer
     smbclient -L host -U DOMAIN/simons%password
     
 
+## SMB Credentials
 
+    cp ~/env/private/.smbcredentials.* ~/
+    chmod 600 ~/.smbcredentials.*
