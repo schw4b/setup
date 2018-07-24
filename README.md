@@ -27,7 +27,7 @@ Download Dropbox from official website.
 
 ## Setup enctypted filesystems
 
-    # copy keys from phone
+    # install keys from phone
     gpg ~/keys.tar.gz.gpg
     tar xvzf ~/keys.tar.gz
 
@@ -43,7 +43,7 @@ Download Dropbox from official website.
 ## Install SSH keys
     tar xvzf ~/env/private/ssh.tar.gz -C $HOME
 
-## Sudoer
+## Sudo
 
     sudo visudo
 
@@ -160,7 +160,3 @@ Check access to a windows domain printer
 
     smbclient -L host -U DOMAIN/simons%password
 
-## SMB Credentials
-
-    cp ~/env/private/.smbcredentials.* ~/
-    chmod 600 ~/.smbcredentials.*
