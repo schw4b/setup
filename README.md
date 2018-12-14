@@ -44,7 +44,7 @@ Download Dropbox from official website.
     WaylandEnable=false
     
 ## Install SSH keys
-    tar xvzf ~/env/private/ssh.tar.gz -C $HOME
+    tar xvzf ~/.private/ssh.tar.gz -C $HOME
 
 ## Sudo
 
