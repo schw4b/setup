@@ -25,16 +25,16 @@ Your should attach your disk at the fastest sata links
 ## Dropbox
 Download Dropbox from official website.
 
-    sudo apt-get install python-gtk2 libpango1.0-0
+    sudo apt-get install ibpango1.0-0
     sudo dpkg -i dropbox_2015.10.28_amd64.deb
 
 ## Setup enctypted filesystems
 
-    # install keys from phone
-    gpg ~/keys.tar.gz.gpg
-    tar xvzf ~/keys.tar.gz
+    vim ~/.encfs
+    # enter password
+    chmod 600 ~/encfs
 
-    sudo apt-get install encfs cryfs
+    sudo apt-get install encfs
     mkdir ~/env; cat ~/.encfs
     encfs ~/Dropbox/.env/ ~/env/
     ~/env/conf/install
@@ -89,6 +89,7 @@ Download Skype from official website.
     sudo apt-get install r-base
     
 Get RStudio deb package from website and install it.
+    
     sudo apt-get install libjpeg62 
     sudo dpkg -i rstudio-xenial-1.0.153-amd64.deb
 
