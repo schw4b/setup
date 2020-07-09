@@ -20,13 +20,11 @@ Your should attach your disk at the fastest sata links
 
     rm -rf ~/Templates ~/Public ~/examples.desktop
     sudo apt install gnome-tweak-tool
-    sudo apt-get install moka-icon-theme
 
 ## Dropbox
 Download Dropbox from official website.
 
-    sudo apt-get install ibpango1.0-0
-    sudo dpkg -i dropbox_2015.10.28_amd64.deb
+    sudo dpkg -i dropbox_2020.03.04_amd64.deb
 
 ## Setup enctypted filesystems
 
