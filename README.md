@@ -62,7 +62,7 @@ Download Dropbox from official website.
 
 ### Basic packages
 
-    sudo apt-get install scribus gimp unrar filezilla hplip nmap imagemagick smbclient cifs-utils vpnc screenruler pwgen mesa-utils flip colordiff vinagre hardinfo
+    sudo apt-get install scribus gimp unrar filezilla hplip nmap imagemagick smbclient cifs-utils vpnc screenruler pwgen mesa-utils flip colordiff hardinfo
 
 ### Skype
 Download Skype from official website.
@@ -84,12 +84,14 @@ Download Skype from official website.
     sudo apt-get install ubuntu-restricted-extras
     
 ### R and Rstudio
+    sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
     sudo apt-get install r-base
     
 Get RStudio deb package from website and install it.
     
     sudo apt-get install libjpeg62 
-    sudo dpkg -i rstudio-xenial-1.0.153-amd64.deb
+    sudo dpkg -i studio-1.3.959-amd64.deb
 
 Install prerequisite packages for `devtools`
     
