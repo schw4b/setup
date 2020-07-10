@@ -93,9 +93,9 @@ Get RStudio deb package from website and install it.
     sudo apt-get install libjpeg62 
     sudo dpkg -i studio-1.3.959-amd64.deb
 
-Install prerequisite packages for `devtools`
+Install libraries that are required by some of the R packages I'm using
     
-    sudo apt-get install libcurl3 libssl-dev
+    sudo apt-get install libcurl4-openssl-dev # httr and rvest
 
 ### Games
 
