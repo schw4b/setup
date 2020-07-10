@@ -67,7 +67,6 @@ Download Dropbox from official website.
 ### Skype
 Download Skype from official website.
 
-    sudo apt-get install gconf-service libgconf-2-4
     sudo dpkg -i ~/Downloads/skypeforlinux-64.deb
 
 ### Git
