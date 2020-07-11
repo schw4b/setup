@@ -96,6 +96,10 @@ Install libraries that are required by some of the R packages I'm using
     
     sudo apt-get install libcurl4-openssl-dev # httr and rvest
 
+### Latex
+
+    sudo apt-get install texlive-latex-extra
+
 ### Games
 
     get freeciv-client-gtk micropolis
