@@ -62,7 +62,7 @@ Download Dropbox from official website.
 
 ### Basic packages
 
-    sudo apt-get install scribus gimp unrar filezilla hplip nmap imagemagick smbclient cifs-utils vpnc screenruler pwgen mesa-utils flip colordiff hardinfo
+    sudo apt-get install scribus gimp unrar filezilla hplip nmap imagemagick smbclient cifs-utils vpnc screenruler pwgen glmark2 flip colordiff hardinfo
 
 ### Skype
 Download Skype from official website.
