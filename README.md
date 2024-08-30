@@ -10,21 +10,14 @@ Your should attach your disk at the fastest sata links
     sudo apt-get install vim
 
 ## Install Google Chrome
+Download from Google website, then run:
 
-    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-    sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-    sudo apt-get update
-    sudo apt-get install google-chrome-stable
+    sudo dpkg -i google-chrome-stable_current_amd64.deb
       
-## Look & Feel
-
-    rm -rf ~/Templates ~/Public ~/examples.desktop
-    sudo apt install gnome-tweak-tool
-
 ## Dropbox
 Download Dropbox from official website.
 
-    sudo dpkg -i dropbox_2020.03.04_amd64.deb
+    sudo dpkg -i dropbox_2024.04.17_amd64.deb
 
 ## Setup enctypted filesystems
 
