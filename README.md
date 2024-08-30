@@ -23,7 +23,7 @@ Download Dropbox from official website.
 
     vim ~/.encfs
     # enter password
-    chmod 600 ~/encfs
+    chmod 600 ~/.encfs
 
     sudo apt-get install encfs
     mkdir ~/env; cat ~/.encfs
