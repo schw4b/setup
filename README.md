@@ -29,27 +29,9 @@ Download Dropbox from official website.
     mkdir ~/env; cat ~/.encfs
     encfs ~/Dropbox/.env/ ~/env/
     ~/env/conf/install
-
-## Improve memory and disable Wayland
-    sudo vim  /etc/gdm3/custom.conf
-    WaylandEnable=false
-    
+   
 ## Install SSH keys
     tar xvzf ~/.private/ssh.tar.gz -C $HOME
-
-## Sudo
-
-    sudo visudo
-
-    %simon ALL=NOPASSWD: /sbin/reboot
-    %simon ALL=NOPASSWD: /sbin/halt
-    %simon ALL=NOPASSWD: /usr/sbin/pm-suspend
-    %simon ALL=NOPASSWD: /usr/sbin/vpnc-connect
-    %simon ALL=NOPASSWD: /usr/sbin/vpnc-disconnect
-    %simon ALL=NOPASSWD: /usr/bin/unattended-upgrade
-    %simon ALL=NOPASSWD: /usr/bin/apt-get
-    %simon ALL=NOPASSWD: /bin/mount
-    %simon ALL=NOPASSWD: /bin/umount
 
 ## Packages
 
