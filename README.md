@@ -5,8 +5,8 @@
 ### SATA ports
 You should attach your disk to the fastest SATA link.
 
-    dmesg | grep SATA | grep up
-    dmesg | grep ata?
+    sudo dmesg | grep SATA | grep up
+    sudo dmesg | grep ata?
 
 ### Secure boot
     mokutil --sb-state
