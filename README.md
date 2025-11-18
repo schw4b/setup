@@ -1,13 +1,15 @@
-# Setup of my linux boxes
+# Setup of my Linux boxes
 
-## Check SATA ports
-Your should attach your disk at the fastest sata links
+## Checks
+
+### SATA ports
+You should attach your disk to the fastest SATA link.
 
     dmesg | grep SATA | grep up
     dmesg | grep ata?
 
-## Install Vim
-    sudo apt-get install vim
+### Secure boot
+    mokutil --sb-state
 
 ## Install Google Chrome
 Download from Google website, then run:
@@ -15,11 +17,11 @@ Download from Google website, then run:
     sudo dpkg -i google-chrome-stable_current_amd64.deb
       
 ## Dropbox
-Download Dropbox from official website.
+Download Dropbox from the official website.
 
     sudo dpkg -i dropbox_2024.04.17_amd64.deb
 
-## Setup enctypted filesystems
+## Setup encrypted filesystems
 
     vim ~/.encfs
     # enter password
@@ -40,7 +42,7 @@ Download Dropbox from official website.
     sudo apt-get install scribus gimp unrar filezilla hplip nmap imagemagick smbclient cifs-utils vpnc screenruler pwgen glmark2 flip colordiff hardinfo
 
 ### Skype
-Download Skype from official website.
+Download Skype from the official website.
 
     sudo dpkg -i ~/Downloads/skypeforlinux-64.deb
 
@@ -57,17 +59,17 @@ Download Skype from official website.
 
     sudo apt-get install ubuntu-restricted-extras
     
-### R and Rstudio
+### R and RStudio
     sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
     sudo apt-get install r-base
     
-Get RStudio deb package from website and install it.
+Get the RStudio deb package from the website and install it.
     
     sudo apt-get install libjpeg62 
     sudo dpkg -i studio-1.3.959-amd64.deb
     
-Fix for rstudio blank screen after window resizing on ultia-wide monitors
+Fix for RStudio blank screen after window resizing on ultra-wide monitors
 
     sudo apt-get install libqt5webenginecore5
     
@@ -95,7 +97,7 @@ Install libraries that are required by some of the R packages I'm using
     dpkg -i virtualbox-5.1_5.1.26-117224-Ubuntu-xenial_amd64.deb
     
 ## NVIDIA
-Search nvidia website for suitable driver version for card
+Search nvidia website for a suitable driver version for card
 
     sudo add-apt-repository ppa:graphics-drivers
     sudo apt-get update
@@ -142,7 +144,7 @@ This may be required with office printers
     client min protocol = SMB2
     client max protocol = SMB3
     
-Check access to a windows domain printer
+Check access to a Windows domain printer
 
     smbclient -L host -U DOMAIN/simons%password
 
