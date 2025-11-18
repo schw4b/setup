@@ -11,6 +11,9 @@ You should attach your disk to the fastest SATA link.
 ### Secure boot
     mokutil --sb-state
 
+## Install vim
+    sudo apt-get install vim
+
 ## Install Google Chrome
 Download from Google website, then run:
 
