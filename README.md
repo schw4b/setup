@@ -59,7 +59,7 @@ Download Dropbox from the official website.
     sudo apt-get install libxcb-xinerama0 libxcb-xtest0 libxcb-cursor0
     sudo dpkg -i zoom_amd64.deb
     
-### R and RStudio
+### R RStudio, and Quarto
 The best way to install R (package r-base) is to follow the most recent instructions for Ubuntu Linux at <https://cran.r-project.org/>.
     
 Get the RStudio deb package from the website and install it.
@@ -67,6 +67,8 @@ Get the RStudio deb package from the website and install it.
     sudo apt-get install libssl-dev libclang-dev
     sudo dpkg -i rstudio-2025.09.2-418-amd64.deb
 Use Chaos theme and Courier font size 12 for editor and help.
+
+    sudo dpkg -i quarto-1.8.26-linux-amd64.deb
     
 Fix for RStudio blank screen after window resizing on ultra-wide monitors
 
