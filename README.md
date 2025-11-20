@@ -24,7 +24,7 @@ Download from Google website, then run:
 ## Dropbox
 Download Dropbox from the official website.
 
-    sudo dpkg -i dropbox_2024.04.17_amd64.deb
+    sudo dpkg -i dropbox_2025.05.20_amd64.deb
 
 ## Setup encrypted filesystems
 
@@ -43,15 +43,10 @@ Download Dropbox from the official website.
 
 ## Packages
 
-### Basic packages and tools
+### Basic tools and packages
 
     sudo apt-get install unrar pwgen flip colordiff
     sudo apt-get install gimp hplip imagemagick screenruler hardinfo
-
-### Skype
-Download Skype from the official website.
-
-    sudo dpkg -i ~/Downloads/skypeforlinux-64.deb
 
 ### Git
 
