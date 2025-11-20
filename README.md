@@ -66,6 +66,7 @@ Get the RStudio deb package from the website and install it.
 
     sudo apt-get install libssl-dev libclang-dev
     sudo dpkg -i rstudio-2025.09.2-418-amd64.deb
+Use Chaos theme and Courier font size 12 for editor and help.
     
 Fix for RStudio blank screen after window resizing on ultra-wide monitors
 
