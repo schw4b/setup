@@ -9,9 +9,11 @@ You should attach your disk to the fastest SATA link.
     sudo dmesg | grep ata?
 
 ### Secure boot
+
     mokutil --sb-state
 
 ## Install vim
+
     sudo apt-get install vim
 
 ## Install Google Chrome
@@ -36,13 +38,15 @@ Download Dropbox from the official website.
     ~/env/conf/install
    
 ## Install SSH keys
+
     tar xvzf ~/.private/ssh.tar.gz -C $HOME
 
 ## Packages
 
-### Basic packages
+### Basic packages and tools
 
-    sudo apt-get install scribus gimp unrar filezilla hplip nmap imagemagick smbclient cifs-utils vpnc screenruler pwgen glmark2 flip colordiff hardinfo
+    sudo apt-get install unrar pwgen flip colordiff
+    sudo apt-get install gimp hplip imagemagick screenruler hardinfo
 
 ### Skype
 Download Skype from the official website.
@@ -50,6 +54,7 @@ Download Skype from the official website.
     sudo dpkg -i ~/Downloads/skypeforlinux-64.deb
 
 ### Git
+
     sudo apt-get install git
     git config --global user.email "schw4b@gmail.com"
     git config --global user.name "Simon Schwab"
