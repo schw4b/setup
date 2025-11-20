@@ -53,6 +53,11 @@ Download Dropbox from the official website.
     sudo apt-get install git
     git config --global user.email "schw4b@gmail.com"
     git config --global user.name "Simon Schwab"
+
+### Zoom
+
+    sudo apt-get install libxcb-xinerama0 libxcb-xtest0 libxcb-cursor0
+    sudo dpkg -i zoom_amd64.deb
     
 ### R and RStudio
     sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
