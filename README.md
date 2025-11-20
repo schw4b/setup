@@ -60,6 +60,8 @@ Download Dropbox from the official website.
     sudo dpkg -i zoom_amd64.deb
     
 ### R and RStudio
+The best way to install R (package r-base) is to follow the most recent instructions for Ubuntu Linux at <https://cran.r-project.org/>.
+
     sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
     sudo apt-get install r-base
