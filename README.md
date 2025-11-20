@@ -59,14 +59,6 @@ Download Skype from the official website.
     git config --global user.email "schw4b@gmail.com"
     git config --global user.name "Simon Schwab"
     
-### MRI/neuroscience:
-
-    sudo apt-get install mricron dcm2niix
-    
-### Multimedia
-
-    sudo apt-get install ubuntu-restricted-extras
-    
 ### R and RStudio
     sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
