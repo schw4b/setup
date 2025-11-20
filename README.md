@@ -61,15 +61,11 @@ Download Dropbox from the official website.
     
 ### R and RStudio
 The best way to install R (package r-base) is to follow the most recent instructions for Ubuntu Linux at <https://cran.r-project.org/>.
-
-    sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
-    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-    sudo apt-get install r-base
     
 Get the RStudio deb package from the website and install it.
-    
-    sudo apt-get install libjpeg62 
-    sudo dpkg -i studio-1.3.959-amd64.deb
+
+    sudo apt-get install libssl-dev libclang-dev
+    sudo dpkg -i rstudio-2025.09.2-418-amd64.deb
     
 Fix for RStudio blank screen after window resizing on ultra-wide monitors
 
@@ -99,6 +95,7 @@ Install libraries that are required by some of the R packages I'm using
     dpkg -i virtualbox-5.1_5.1.26-117224-Ubuntu-xenial_amd64.deb
     
 ## NVIDIA
+
 Search nvidia website for a suitable driver version for card
 
     sudo add-apt-repository ppa:graphics-drivers
