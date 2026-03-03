@@ -85,6 +85,10 @@ Install libraries that are required by some of the R packages I'm using
 
     sudo apt-get install texlive-latex-extra
 
+### LibreOffice
+
+    sudo apt-get libreoffice hyphen-en-us
+
 ### Games
 
     get freeciv-client-gtk micropolis
