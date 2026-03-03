@@ -87,7 +87,7 @@ Install libraries that are required by some of the R packages I'm using
 
 ### LibreOffice
 
-    sudo apt-get libreoffice hyphen-en-us
+    sudo apt-get libreoffice hyphen-en-us libreoffice-l10n-de
 
 ### Games
 
