@@ -54,6 +54,10 @@ Download Dropbox from the official website.
     git config --global user.email "schw4b@gmail.com"
     git config --global user.name "Simon Schwab"
 
+Resolve the issue under Windows that Linux changed appear changed due to different line breaks.
+
+    git config --global core.autocrlf true
+
 ### Zoom
 
     sudo apt-get install libxcb-xinerama0 libxcb-xtest0 libxcb-cursor0
