@@ -12,6 +12,12 @@ You should attach your disk to the fastest SATA link.
 
     mokutil --sb-state
 
+## GNOME settings
+
+### Enable paste with the middle mouse button
+    
+    gsettings set org.gnome.desktop.interface gtk-enable-primary-paste true
+
 ## Install vim
 
     sudo apt-get install vim
