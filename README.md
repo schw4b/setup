@@ -51,7 +51,11 @@ Download Dropbox from the official website.
 
 ### Basic tiny tools
 
-    sudo apt-get install unrar pwgen flip hplip imagemagick screenruler
+    sudo apt-get install unrar pwgen flip hplip screenruler
+
+### Image processing
+
+    sudo apt-get install imagemagick gimp
 
 ### Git
 
