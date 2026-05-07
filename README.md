@@ -75,7 +75,7 @@ Resolve the issue under Windows that Linux changed files appear changed due to d
 ### R RStudio, and Quarto
 The best way to install R (package r-base) is to follow the most recent instructions for Ubuntu Linux at <https://cran.r-project.org/>.
 
-    sudo apt-get install r-base
+    sudo apt-get --no-install-recommends install r-base
     sudo apt-get install r-base-dev
     
 Get the RStudio deb package from the website and install it.
