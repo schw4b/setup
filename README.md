@@ -73,7 +73,7 @@ Resolve the issue under Windows that Linux changed files appear changed due to d
     sudo apt --fix-broken install # install dependencies
     sudo apt-get install libopengl0
     
-### R RStudio, and Quarto
+### R, RStudio, and Quarto
 The best way to install R (package r-base) is to follow the most recent instructions for Ubuntu Linux at <https://cran.r-project.org/>.
 
     sudo apt-get --no-install-recommends install r-base
@@ -82,7 +82,8 @@ The best way to install R (package r-base) is to follow the most recent instruct
 Get the RStudio deb package from the website and install it.
 
     sudo apt-get install libssl-dev libclang-dev
-    sudo dpkg -i rstudio-2025.09.2-418-amd64.deb
+    sudo dpkg -i rstudio-2026.04.0-526-amd64.deb
+    
 Use Chaos theme and Courier font size 12 for editor and help.
 
     sudo dpkg -i quarto-1.8.26-linux-amd64.deb
