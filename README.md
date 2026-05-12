@@ -30,7 +30,7 @@ Download from Google website, then run:
 ## Dropbox
 Download Dropbox from the official website.
 
-    sudo dpkg -i dropbox_2025.05.20_amd64.deb
+    sudo dpkg -i dropbox_2026.01.15_amd64.deb
 
 ## Setup encrypted filesystems
 
