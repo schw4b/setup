@@ -84,13 +84,9 @@ Get the RStudio deb package from the website and install it.
     sudo apt-get install libssl-dev libclang-dev
     sudo dpkg -i rstudio-2026.04.0-526-amd64.deb
     
-Use Chaos theme and Courier font size 12 for editor and help.
+Use Chaos theme and font size 12 for editor and help.
 
-    sudo dpkg -i quarto-1.8.26-linux-amd64.deb
-    
-Fix for RStudio blank screen after window resizing on ultra-wide monitors
-
-    sudo apt-get install libqt5webenginecore5
+    sudo dpkg -i quarto-1.9.37-linux-amd64.deb
     
 Install libraries that are required by some of the R packages I'm using
     
@@ -103,72 +99,4 @@ Install libraries that are required by some of the R packages I'm using
 ### LibreOffice
 
     sudo apt-get libreoffice hyphen-en-us libreoffice-l10n-de
-
-### Games
-
-    get freeciv-client-gtk micropolis
     
-    Flightgear:
-    
-    sudo add-apt-repository ppa:saiarcot895/flightgear
-    sudo apt-get update
-    get flightgear
-    
-## VirtualBox
-
-    sudo apt-get libqt5x11extras5
-    dpkg -i virtualbox-5.1_5.1.26-117224-Ubuntu-xenial_amd64.deb
-    
-## NVIDIA
-
-Search nvidia website for a suitable driver version for card
-
-    sudo add-apt-repository ppa:graphics-drivers
-    sudo apt-get update
-    search ^nvidia-xxx | grep binary
-    get nvidia-xxx
-
-Fix splash after nvidia driver was installed
-
-    sudo apt-get install v86d
-    sudo vim /etc/default/grub
-    GRUB_GFXMODE=1280x1024x24
-    GRUB_GFXPAYLOAD_LINUX=keep
-    echo FRAMEBUFFER=y | sudo tee /etc/initramfs-tools/conf.d/splash
-    sudo update-initramfs -u
-    sudo update-grub2
-
-## Speed up GRUB Menu
-
-    sudo vim /etc/default/grub
-    set timeout to 2 sec
-    comment hidden timeout
-    sudo update-grub2
-
-## Change kernel boot options
-For echobase:
-
-    sudo vim /etc/default/grub
-    GRUB_CMDLINE_LINUX_DEFAULT="nomodeset"
-    sudo update-grub
-
-## Printers
-HP Officejet Pro 6830 e-All-in-One
-
-    sudo apt-add-repository ppa:otto-kesselgulasch/misc
-    sudo apt-get update
-    get hplip
-    hp-doctor # for HP-1020
-    
-This may be required with office printers
-    
-    sudo vim /etc/samba/smb.conf
-    
-    [global]
-    client min protocol = SMB2
-    client max protocol = SMB3
-    
-Check access to a Windows domain printer
-
-    smbclient -L host -U DOMAIN/simons%password
-
