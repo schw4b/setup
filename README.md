@@ -69,8 +69,9 @@ Resolve the issue under Windows that Linux changed files appear changed due to d
 
 ### Zoom
 
-    sudo apt-get install libxcb-xinerama0 libxcb-xtest0 libxcb-cursor0
     sudo dpkg -i zoom_amd64.deb
+    sudo apt --fix-broken install # install dependencies
+    sudo apt-get install libopengl0
     
 ### R RStudio, and Quarto
 The best way to install R (package r-base) is to follow the most recent instructions for Ubuntu Linux at <https://cran.r-project.org/>.
